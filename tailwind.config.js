@@ -1,6 +1,7 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
+import { defineConfig } from 'vite'
+import tailwindcss from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'; 
 
-/** @type {import('tailwindcss').Config} */
 export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
@@ -16,5 +17,5 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [tailwindcss()],
 };
